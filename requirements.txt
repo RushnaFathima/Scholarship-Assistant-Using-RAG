@@ -1,0 +1,11 @@
+unstructured[all-docs]
+python-magic-bin
+unstructured_inference
+langchain-community
+langchain
+langchain-huggingface
+chromadb
+sentence-transformers
+torch
+python-dotenv
+langchain-groq
