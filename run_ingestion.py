@@ -12,7 +12,7 @@ def main():
     chunks = process_pdfs_in_directory(docs_path)
     create_vector_store(chunks)
 
-    print("\n🎉 Ingestion Completed Successfully!")
+    print("\n Ingestion Completed Successfully!")
 
 
 if __name__ == "__main__":

@@ -9,7 +9,7 @@ def main():
         query = input("You: ")
 
         if query.lower() in ["exit", "quit"]:
-            print("Goodbye 👋")
+            print("Goodbye ")
             break
 
         print("\nSearching...\n")

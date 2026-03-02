@@ -5,7 +5,7 @@ from langchain_core.documents import Document
 
 def create_vector_store(chunks, per_dir="db/chroma_db"):
 
-    print("🔹 Creating Embeddings Model")
+    print(" Creating Embeddings Model")
 
     embedding_model = HuggingFaceEmbeddings(
         model_name="BAAI/bge-base-en-v1.5",
@@ -13,7 +13,7 @@ def create_vector_store(chunks, per_dir="db/chroma_db"):
         encode_kwargs={"normalize_embeddings": True},
     )
 
-    print("🔹 Converting chunks to LangChain Documents")
+    print(" Converting chunks to LangChain Documents")
 
     langchain_docs = []
 
@@ -27,7 +27,7 @@ def create_vector_store(chunks, per_dir="db/chroma_db"):
             )
         )
 
-    print("🔹 Creating Vector Store")
+    print(" Creating Vector Store")
 
     vector_store = Chroma.from_documents(
         documents=langchain_docs,
@@ -36,6 +36,6 @@ def create_vector_store(chunks, per_dir="db/chroma_db"):
         collection_metadata={"hnsw:space": "cosine"},
     )
 
-    print(f"✅ Vector Store created and saved to {per_dir}")
+    print(f" Vector Store created and saved to {per_dir}")
 
     return vector_store
